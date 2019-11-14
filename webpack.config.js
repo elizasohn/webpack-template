@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
+
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -17,7 +18,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Project',
+      title: 'Ping Pong',
       template: './src/index.html',
       inject: 'body'
     })
@@ -33,7 +34,10 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: [
+            /node_modules/,
+            /spec/
+          ],
         loader: "eslint-loader"
       }
     ]
