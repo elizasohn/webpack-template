@@ -1,10 +1,11 @@
-class User {
-  constructor(age) {
+export class User {
+  constructor(age, mercury) {
     this.age = age;
+    this.mercury = mercury;
   }
 
-  // checkType() {
-    //Function body goes here.
+  mercury() {
+    return this.age * .24;
   }
 };
 
