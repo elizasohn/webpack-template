@@ -14,6 +14,10 @@ describe('Ages', () => {
   let person1 = new User(100);
   expect(person1.venus).toEqual(62);
   });
+  test('should correctly create an age on Mars', () => {
+  let person1 = new User(100);
+  expect(person1.mars).toEqual(188);
+  });
 
 
 
