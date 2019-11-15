@@ -18,8 +18,9 @@ export class User {
     return this.calcMars();
   }
   calcMars() {
-    return this.age * .62;
+    return this.age * 1.88;
   }
+
 };
 
 
